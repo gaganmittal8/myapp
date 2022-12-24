@@ -1,0 +1,95 @@
+@import "./style/global"; /* Using a string */
+
+.main_wrapper {
+    padding-top: 56px;
+}
+.table {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.table span {
+    display: inline-block;
+    margin-right: 10px;
+}
+.table th {
+    font-size: 14px;
+}
+.table td {
+    font-size: 12px;
+}
+.btn {
+    font-size: 12px;
+}
+
+.show {
+    display: block;
+    padding-right: 17px;
+}
+.fade {
+    transition: opacity .15s linear;
+}
+.details {
+    font-size: 14px;
+}
+.maindiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    .maindivinner {
+        margin-right: 16px;
+        margin-bottom: 16px;
+        padding: 10px;
+        box-shadow: 0px 0px 2px rgb(0 0 0 / 50%);
+        img {
+            width: 200px;
+            height: 200px;
+            max-width: 100%;
+            display: block;
+        }
+        h6 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            min-height: 20px;
+            width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+@mixin page-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.main {
+    margin-top: 56px;
+}
+.home {
+    @include page-center;
+}
+.signin {
+    @include page-center;
+}
+.page404 {
+    @include page-center;
+    .page404-inner {
+        text-align: center;
+        h1 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}

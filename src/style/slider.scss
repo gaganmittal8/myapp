@@ -1,0 +1,174 @@
+@import "./variables";
+
+.slider-Wrapper {
+    padding: 30px;
+    &__inner {
+        &__content {
+            margin-top: 20px;
+            position: relative;
+            &__card {
+                border: 1px solid #ddd;
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+                min-height: 252px;
+                &--title {
+                    font-size: $font-size-lg;
+                    line-height: 20px;
+                    color: $mb-gray-900;
+                    font-weight: $font-weight-semi-bold;
+                    margin-bottom: 8px;
+                }
+    
+                ul {
+                    li {
+                        padding-bottom: 12px;
+    
+                        a {
+                            font-size: $font-size-md;
+                            color: $mb-gray-900;
+                            display: block;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 41%;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -25px;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 9px 0 rgba(51, 51, 51, 0.2);
+    transition: all .5s ease;
+
+    &.swiper-button-disabled {
+        background: transparent;
+    }
+
+    &::after {
+        content: '';
+    }
+
+    &:hover {
+        background: #d8232a;
+
+        a {
+            background-color: #fff;
+            left: 10px;
+
+            &:after,
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 23px;
+        width: 21px;
+        height: 1px;
+        background-color: #000000;
+        transition: left .5s ease;
+        left: 14px;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 1px;
+            left: -1px;
+            background-color: #000000;
+        }
+
+        &:after {
+            top: -4px;
+            transform: rotate(-45deg);
+        }
+
+        &:before {
+            top: 4px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.swiper-button-next {
+    position: absolute;
+    right: -25px;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 9px 0 rgba(51, 51, 51, 0.2);
+
+    &.swiper-button-disabled {
+        background: transparent;
+    }
+
+    &::after {
+        content: '';
+    }
+
+    &:hover {
+        background: #d8232a;
+
+        a {
+            background-color: #fff;
+            right: 10px;
+
+            &:after,
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 23px;
+        width: 21px;
+        height: 1px;
+        background-color: #000000;
+        transition: right .5s ease;
+        right: 14px;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 1px;
+            right: -1px;
+            background-color: #000000;
+        }
+
+        &:after {
+            top: -4px;
+            transform: rotate(45deg);
+        }
+
+        &:before {
+            top: 4px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.swiper-slide {
+    min-height: 255px;
+}
